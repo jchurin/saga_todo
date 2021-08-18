@@ -8,8 +8,11 @@ import { toggleCheck as toggleCheckAPI } from '../../../api';
 import { useSelector } from 'react-redux';
 
 const Item = ({ id, text, checked }) => {
+  
   const dispatch = useDispatch();
+  
   const { loading } = useSelector((state) => state.todo);
+  
   const toggleCheck = async () => {
     dispatch(todoActions.toggleLoading())
     const response = await toggleCheckAPI(id);
@@ -20,6 +23,7 @@ const Item = ({ id, text, checked }) => {
     }
     dispatch(todoActions.toggleLoading())
   }
+  
   return (
     <ItemWrapper>
       <BulletItem src={bulletItem} />

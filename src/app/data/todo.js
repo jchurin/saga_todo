@@ -12,17 +12,20 @@ export const todoSlice = createSlice({
   name: key,
   initialState,
   reducers: {
-    setList: (state, { payload }) => {
+    setList: (state, { payload }) => {},
+    remove: (state, { payload }) => {},
+    push: (state, { payload }) => {},
+    toggleCheck: (state, { payload }) => {},
+    setListSuccess: (state, { payload }) => {
       state.list = payload
     },
-    push: (state, { payload }) => {
+    pushSuccess: (state, { payload }) => {
       state.list.push(payload)
     },
-    remove: (state, { payload }) => {
+    removeSuccess: (state, { payload }) => {
       state.list = state.list.filter((i) => i.id !== payload)
     },
-    toggleCheck: (state, { payload }) => {
-      debugger;
+    toggleCheckSuccess: (state, { payload }) => {
       const item = state.list.find((i) => i.id === payload);
       state.list.find((i) => i.id === payload).checked = !item.checked;
     },
@@ -40,6 +43,6 @@ export const todoSlice = createSlice({
   },
 })
 
-export const { actions: todoActions } = todoSlice
+export const todoActions = {...todoSlice.actions };
 
 export default todoSlice.reducer
