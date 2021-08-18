@@ -1,0 +1,1 @@
+export const SS_PREFIX = "leni_";
