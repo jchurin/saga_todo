@@ -5,7 +5,6 @@ import { AppContainer } from '../shared/container';
 import Todo from '../todo';
 
 const Landing = () => {
-  console.log('Landing');
   return (
     <AppContainer>
       <Header/>

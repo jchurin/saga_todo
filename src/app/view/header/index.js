@@ -3,8 +3,6 @@ import { HeaderIcon, HeaderText, HeaderWrapper } from './styled';
 import headerImg from '../../img/header.png'
 
 const Header = () => {
-  console.log('Header');
-
   return (
     <HeaderWrapper>
       <HeaderIcon src={headerImg} />

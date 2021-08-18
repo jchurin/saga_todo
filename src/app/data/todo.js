@@ -5,20 +5,7 @@ export const key = 'todo';
 const initialState = {
   loading: false,
   hasError: false,
-  list: [
-    { id: '1', text: 'First todo item', checked: false },
-    { id: '2', text: 'Second todo item', checked: true },
-    { id: '3', text: 'First todo item', checked: false },
-    { id: '4', text: 'Second todo item', checked: true },
-    { id: '5', text: 'First todo item', checked: false },
-    { id: '6', text: 'Second todo item', checked: true },
-    { id: '7', text: 'First todo item', checked: false },
-    { id: '8', text: 'Second todo item', checked: true },
-    { id: '9', text: 'First todo item', checked: false },
-    { id: '10', text: 'Second todo item', checked: true },
-    { id: '11', text: 'First todo item', checked: false },
-    { id: '12', text: 'Second todo item', checked: true },
-  ],
+  list: [],
 }
 
 export const todoSlice = createSlice({
